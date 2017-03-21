@@ -16,16 +16,50 @@
 #include <time.h>
 
 /* Function Prototypes */
-
+void CopyArr(double ar1[], const double ar2[], int n);
+void CopyPtr(double* ar1[], const double* ar2[], int n);
+void CopyPtrs(double* ar2[], const double* start, const double* end);
+void ShowArr(const double ar[], double n);
 
 /* Main Program */
 int main(int argc, char *argv[])
 {
+	//double source[LEN] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	//double target1[LEN];
+	//double target2[LEN];
+	//double target3[LEN];
 
 	return 0;
 }
 
 
 /* Function Definitions */
+void CopyArr(double ar1[], const double ar2[], int n)
+{
+
+
+	return;
+}
+
+void CopyPtr(double* ar1[], const double* ar2[], int n)
+{
+
+
+	return;
+}
+
+void CopyPtrs(double* ar2[], const double* start, const double* end)
+{
+
+
+	return;
+}
+
+void ShowArr(const double ar[], double n)
+{
+
+
+	return;
+}
 
 
