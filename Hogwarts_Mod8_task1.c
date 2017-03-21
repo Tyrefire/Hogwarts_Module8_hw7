@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	//double target2[LEN];
 	//double target3[LEN];
 
-	CopyArr(source, target1, LEN);
+	CopyArr(target1, source, LEN);
 	ShowArr(target1, LEN);
 	return 0;
 }
