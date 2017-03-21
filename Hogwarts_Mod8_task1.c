@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 {
 	double source[LEN] = {1.1, 2.2, 3.3, 4.4, 5.5};
 	double target1[LEN];
+<<<<<<< HEAD
 	double target2[LEN];
 	double target3[LEN];
 	CopyArr( target1, source, LEN);
@@ -37,6 +38,13 @@ int main(int argc, char *argv[])
 	CopyPtrs( target3, &source[0], &source[LEN -1]);
 
 	ShowArr( target3, LEN);
+=======
+	//double target2[LEN];
+	//double target3[LEN];
+
+	CopyArr(target1, source, LEN);
+	ShowArr(target1, LEN);
+>>>>>>> fb79092c2996a8e00dd219f64bb05569bc48100c
 	return 0;
 }
 
@@ -44,7 +52,11 @@ int main(int argc, char *argv[])
 /* Function Definitions */
 void CopyArr(double ar1[], const double ar2[], int n)
 {
+<<<<<<< HEAD
 	for(int i = 0; i < LEN; i++)
+=======
+	for(int i = 0; i < n; i++)
+>>>>>>> fb79092c2996a8e00dd219f64bb05569bc48100c
 	{
 		ar1[i] = ar2[i];
 	}
