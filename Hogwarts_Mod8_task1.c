@@ -24,10 +24,10 @@ void ShowArr(const double ar[], double n);
 /* Main Program */
 int main(int argc, char *argv[])
 {
-	//double source[LEN] = {1.1, 2.2, 3.3, 4.4, 5.5};
-	//double target1[LEN];
-	//double target2[LEN];
-	//double target3[LEN];
+	double source[LEN] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	double target1[LEN];
+	double target2[LEN];
+	double target3[LEN];
 
 	return 0;
 }
@@ -36,7 +36,10 @@ int main(int argc, char *argv[])
 /* Function Definitions */
 void CopyArr(double ar1[], const double ar2[], int n)
 {
-
+	for(int i = 0; i < n; i++)
+	{
+		ar2[i] = ar1[i];
+	}
 
 	return;
 }
