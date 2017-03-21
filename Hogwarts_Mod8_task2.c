@@ -27,12 +27,12 @@ int main(int argc, char *argv[])
 	printf("The List is:\n");
 	for(int i = 0; i < 10; i++)
 	{
-		nums[i] = (rand() %10) + 1;
+		nums[i] = (rand() %100) + 1;
 		for(int j = 0; j < 10; j++)
 		{
 			if(nums[j] == nums[i])
 			{
-				nums[i] = (rand() %10) + 1;
+				nums[i] = (rand() %100) + 1;
 			}
 		}
 		printf("%d ", nums[i]);
