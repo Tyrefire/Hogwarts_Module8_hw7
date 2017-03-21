@@ -15,20 +15,23 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define LEN 5;
+
 /* Function Prototypes */
 void CopyArr(double ar1[], const double ar2[], int n);
 void CopyPtr(double* ar1[], const double* ar2[], int n);
 void CopyPtrs(double* ar2[], const double* start, const double* end);
-void ShowArr(const double ar[], double n);
+void ShowArr(const double ar[], int n);
 
 /* Main Program */
 int main(int argc, char *argv[])
 {
-	//double source[LEN] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	double source[LEN] = {1.1, 2.2, 3.3, 4.4, 5.5};
 	//double target1[LEN];
 	//double target2[LEN];
 	//double target3[LEN];
-
+	CopyArr( source[], target1[], LEN);
+	ShowArr( target1[], LEN);
 	return 0;
 }
 
@@ -36,7 +39,7 @@ int main(int argc, char *argv[])
 /* Function Definitions */
 void CopyArr(double ar1[], const double ar2[], int n)
 {
-
+	for(int i = 0
 
 	return;
 }
@@ -55,7 +58,7 @@ void CopyPtrs(double* ar2[], const double* start, const double* end)
 	return;
 }
 
-void ShowArr(const double ar[], double n)
+void ShowArr(const double ar[], int n)
 {
 
 
