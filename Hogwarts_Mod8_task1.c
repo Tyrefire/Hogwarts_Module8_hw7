@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 {
 	double source[LEN] = {1.1, 2.2, 3.3, 4.4, 5.5};
 	double target1[LEN];
-	//double target2[LEN];
+	double target2[LEN];
 	double target3[LEN];
 
 	printf("Source Array:\n\t");
@@ -38,10 +38,10 @@ int main(int argc, char *argv[])
 	CopyArr(target1, source, LEN);
 
 	printf("Copied by Pointer:\n\t");
+	CopyPtr(target2, source, LEN);
 
 	printf("Copied using Pointer Range:\n\t");
 	CopyPtrs(target3, &source[0], &source[LEN]);
-
 
 	return 0;
 }
@@ -61,20 +61,36 @@ void CopyArr(double ar1[], const double ar2[], int n)
 
 void CopyPtr(double* ar1, const double* ar2, int n)
 {
-	
+	for(int i = 0; i < n; i++)
+	{
+		ar1[i] = ar2[i];
+	}
+	ShowArr(ar1, n);
 
 	return;
 }
 
 void CopyPtrs(double* ar2, const double* start, const double* end)
 {
-	int i = (*start);
-	while(i < *end && i >= *start)
+	while(start < end)
 	{
-		ar2[i] = ar2[i];
-		i++;
+		ar2[0] = start[1];
+		start++;
 	}
 	ShowArr(ar2, LEN);
+	/*
+	int i;
+	while( ar2[i] != start[i] )
+	{
+		for( i = 0; start[i] != end[i]; i++ )
+		{
+		ar2[i] = start[i];
+		i++;
+		return;
+		}
+		printf("%lf", ar2[i]);
+	}
+	*/
 
 	return;
 }
@@ -86,7 +102,6 @@ void ShowArr(const double ar[], int n)
 		printf("%.1f ", ar[i]);
 	}
 	printf("\n");
-
 
 	return;
 }
