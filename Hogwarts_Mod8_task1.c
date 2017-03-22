@@ -30,9 +30,13 @@ int main(int argc, char *argv[])
 	double target2[LEN];
 	double target3[LEN];
 
+	printf("Source:        ");
 	ShowArr(source, LEN);
+	printf("Index:         ");
 	CopyArr(target1, source, LEN);
+	printf("Pointer:       ");
 	CopyPtr(target2, source, LEN);
+	printf("Pointer Range: ");
 	CopyPtrs(target3, &source[0], &source[LEN]);
 
 	return 0;
@@ -56,6 +60,7 @@ void CopyPtr(double* ar1, const double* ar2, int n)
 	for(int i = 0; i < n; i++)
 	{
 		ar1[i] = ar2[i];
+	
 	}
 
 	ShowArr(ar1, n);
@@ -66,14 +71,13 @@ void CopyPtr(double* ar1, const double* ar2, int n)
 void CopyPtrs(double* ar2, const double* start, const double* end)
 {
 	int i = 0;
-
-	do
+	
+	while(start != end)
 	{
 		ar2[i] = *start;
 		i++;
 		start++;
 	}
-	while(start != end);
 
 	ShowArr(ar2, LEN);
 
