@@ -15,13 +15,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define NUMV 10
 /* Function Prototypes */
 void MaxMin(int numvals, int vals[], int* min, int* max);
 
 /* Main Program */
 int main(int argc, char *argv[])
 {
-	int nums[10] = {0,0,0,0,0,0,0,0,0,0};
+	int nums[NUMV] = {0,0,0,0,0,0,0,0,0,0};
 	int min = 0, max = 0;
 	srand(time(NULL));
 	printf("The List is:\n");
@@ -39,7 +40,7 @@ int main(int argc, char *argv[])
 	}
 	printf("\n");
 
-	MaxMin(10, nums, &min, &max);
+	MaxMin(NUMV, nums, &min, &max);
 
 	printf("The minimum value is: %d\n", min);
 	printf("The maximum value is: %d\n", max);
