@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	ShowArr( target1, LEN);
 	CopyPtr( target2, source, LEN);
 	ShowArr( target2, LEN);
-	CopyPtrs( target3, &source[0], &source[LEN -1]);
+	CopyPtrs( target3, source[0], source[LEN -1]);
 
 	ShowArr( target3, LEN);
 
@@ -69,13 +69,13 @@ void CopyPtrs(double* ar2, const double* start, const double* end)
 	int i;
 	while( ar2[i] != start[i] )
 	{
-		for( i = 0; start[i] != end[i]; i++ )
+		for( i = 0; start[i] == end[i]; i++ )
 		{
 		ar2[i] = start[i];
 		i++;
 		return;
 		}
-		printf("%lf", ar2[i]);
+	//	printf("%lf", ar2[i]);
 	}
 
 
