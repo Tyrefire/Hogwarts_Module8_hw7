@@ -59,7 +59,7 @@ void CopyPtr(double* ar1, const double* ar2, int n)
 {
 	for(int i = 0; i < n; i++)
 	{
-		ar1[i] = ar2[i];
+		*(ar1+i) = *(ar2+i);// did not like ar1++ or ar2++ for some reason
 	
 	}
 
