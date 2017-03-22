@@ -14,8 +14,8 @@
 #include <stdio.h>		/* For Standard I/O */
 #include <stdlib.h>
 #include <time.h>
-
 #define NUMV 10
+
 /* Function Prototypes */
 void MaxMin(int numvals, int vals[], int* min, int* max);
 
@@ -24,12 +24,13 @@ int main(int argc, char *argv[])
 {
 	int nums[NUMV] = {0,0,0,0,0,0,0,0,0,0};
 	int min = 0, max = 0;
+	//int check;
 	srand(time(NULL));
 	printf("The List is:\n");
-	for(int i = 0; i < 10; i++)
+	for(int i = 0; i < NUMV; i++)
 	{
 		nums[i] = (rand() %100) + 1;
-		for(int j = 0; j < 10; j++)
+		for(int j = 0; j < NUMV; j++)
 		{
 			if(nums[j] == nums[i])
 			{

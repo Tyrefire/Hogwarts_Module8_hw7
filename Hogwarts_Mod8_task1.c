@@ -66,7 +66,7 @@ void CopyPtrs(double* ar2, const double* start, const double* end)
 	int i = 0;
 	do
 	{
-		ar2[i] = &start;
+		ar2[i] = *start;
 		i++;
 		start++;
 	}
