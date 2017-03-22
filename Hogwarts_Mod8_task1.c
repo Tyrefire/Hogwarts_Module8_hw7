@@ -45,6 +45,7 @@ void CopyArr(double ar1[], const double ar2[], int n)
 	{
 		ar1[i] = ar2[i];
 	}
+
 	ShowArr(ar1, n);
 
 	return;
@@ -56,6 +57,7 @@ void CopyPtr(double* ar1, const double* ar2, int n)
 	{
 		ar1[i] = ar2[i];
 	}
+
 	ShowArr(ar1, n);
 
 	return;
@@ -64,6 +66,7 @@ void CopyPtr(double* ar1, const double* ar2, int n)
 void CopyPtrs(double* ar2, const double* start, const double* end)
 {
 	int i = 0;
+
 	do
 	{
 		ar2[i] = *start;
@@ -71,6 +74,7 @@ void CopyPtrs(double* ar2, const double* start, const double* end)
 		start++;
 	}
 	while(start != end);
+
 	ShowArr(ar2, LEN);
 
 	return;
