@@ -59,7 +59,7 @@ void CopyPtr(double* ar1, const double* ar2, int n)
 {
 	for(int i = 0; i < n; i++)
 	{
-		*(ar1+i) = *(ar2+i);// did not like ar1++ or ar2++ for some reason
+		*(ar1 + i) = *(ar2 + i);// did not like ar1++ or ar2++ for some reason
 	
 	}
 
@@ -74,7 +74,7 @@ void CopyPtrs(double* ar2, const double* start, const double* end)
 	
 	while(start != end)
 	{
-		ar2[i] = *start;
+		*(ar2 + i) = *start;
 		i++;
 		start++;
 	}
